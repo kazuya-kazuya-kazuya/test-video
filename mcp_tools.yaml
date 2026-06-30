@@ -1,0 +1,114 @@
+# MCP tool registry for this project.
+# 新しいMCPを追加した場合は、この一覧に追記してください。
+
+- name: "ffmpeg-mcp"
+  category: "video"
+  description: "動画のカット、結合、フォーマット変換、フィルタ適用"
+  requires: "ffmpeg/ffprobe がPATHから実行可能であること"
+  input_formats: ["mp4", "mov", "mkv", "webm", "mp3", "wav", "srt", "vtt"]
+  output_formats: ["mp4", "mov", "webm", "mp3", "wav", "srt", "vtt"]
+
+- name: "runwayml-mcp"
+  category: "video"
+  description: "Runway Gen-2/Gen-3 によるテキスト・画像からのAI動画生成"
+  requires: "Runway APIキー"
+  input_formats: ["txt", "png", "jpg", "jpeg"]
+  output_formats: ["mp4"]
+
+- name: "kling-mcp"
+  category: "video"
+  description: "Kling による高品質AI動画生成。日本語・中国語コンテンツに強い"
+  requires: "Kling APIキーまたは利用可能な実行環境"
+  input_formats: ["txt", "png", "jpg", "jpeg"]
+  output_formats: ["mp4"]
+
+- name: "premiere-mcp"
+  category: "video"
+  description: "Premiere Pro のシーケンス編集、トランジション、エクスポート"
+  requires: "Adobe Premiere Pro / Adobe CC / ExtendScript 実行環境"
+  input_formats: ["mp4", "mov", "wav", "mp3", "srt"]
+  output_formats: ["mp4", "mov"]
+
+- name: "capcut-mcp"
+  category: "video"
+  description: "CapCut のテンプレート適用、字幕、エフェクト処理"
+  requires: "Business API契約、またはGUI自動化可能なCapCut環境"
+  input_formats: ["mp4", "mov", "wav", "mp3", "srt"]
+  output_formats: ["mp4"]
+
+- name: "stability-mcp"
+  category: "image"
+  description: "Stable Diffusion / Stability AI による画像生成・編集"
+  requires: "Stability AI APIキー、またはローカルStable Diffusion環境"
+  input_formats: ["txt", "png", "jpg", "jpeg"]
+  output_formats: ["png", "jpg"]
+
+- name: "dalle-mcp"
+  category: "image"
+  description: "DALL-E による画像生成"
+  requires: "OpenAI APIキー"
+  input_formats: ["txt", "png", "jpg", "jpeg"]
+  output_formats: ["png", "jpg"]
+
+- name: "pexels-mcp"
+  category: "image"
+  description: "Pexels のストック動画・画像検索取得"
+  requires: "Pexels APIキー"
+  input_formats: ["txt"]
+  output_formats: ["mp4", "jpg", "png"]
+
+- name: "unsplash-mcp"
+  category: "image"
+  description: "Unsplash の高品質フリー画像取得"
+  requires: "Unsplash APIキー"
+  input_formats: ["txt"]
+  output_formats: ["jpg", "png"]
+
+- name: "voicevox-mcp"
+  category: "audio"
+  description: "VOICEVOXによる日本語音声合成"
+  requires: "VOICEVOXアプリ起動、通常は http://127.0.0.1:50021"
+  input_formats: ["txt"]
+  output_formats: ["wav"]
+
+- name: "elevenlabs-mcp"
+  category: "audio"
+  description: "ElevenLabs による高品質多言語音声合成"
+  requires: "ElevenLabs APIキー"
+  input_formats: ["txt"]
+  output_formats: ["mp3", "wav"]
+
+- name: "openai-tts-mcp"
+  category: "audio"
+  description: "OpenAI TTS APIによる音声生成"
+  requires: "OpenAI APIキー"
+  input_formats: ["txt"]
+  output_formats: ["mp3", "wav"]
+
+- name: "whisper-mcp"
+  category: "text"
+  description: "動画・音声の文字起こしと字幕ファイル生成"
+  requires: "Whisper実行環境、または文字起こしAPIキー"
+  input_formats: ["mp4", "mov", "mp3", "wav"]
+  output_formats: ["txt", "srt", "vtt"]
+
+- name: "adobe-express-mcp"
+  category: "text"
+  description: "テロップ、タイトルカード、サムネイル生成"
+  requires: "Adobe Express APIまたは連携環境"
+  input_formats: ["txt", "png", "jpg"]
+  output_formats: ["png", "jpg", "mp4"]
+
+- name: "youtube-mcp"
+  category: "distribution"
+  description: "YouTubeへのアップロードとメタデータ設定"
+  requires: "YouTube Data API認証"
+  input_formats: ["mp4", "txt", "png", "jpg"]
+  output_formats: ["url", "json"]
+
+- name: "filesystem-mcp"
+  category: "distribution"
+  description: "ローカルファイルの読み書き管理"
+  requires: "プロジェクト配下への読み書き権限"
+  input_formats: ["*"]
+  output_formats: ["*"]

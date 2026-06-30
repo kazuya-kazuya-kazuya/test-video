@@ -1,0 +1,34 @@
+project:
+  name: "test-video"
+  language: "ja"
+  timezone: "Asia/Tokyo"
+
+defaults:
+  output_dir: "outputs"
+  asset_dir: "assets"
+  temp_dir: "tmp"
+  subtitle_dir: "subtitles"
+  video:
+    container: "mp4"
+    codec: "h264"
+    resolution: "1920x1080"
+    frame_rate: 30
+  audio:
+    sample_rate: 48000
+    channels: 2
+
+tool_selection:
+  require_confirmation_when_multiple_candidates: true
+  skip_confirmation_when_user_specifies_tool: true
+  defaults:
+    japanese_tts: "voicevox-mcp"
+    professional_editing: "premiere-mcp"
+    short_social_template: "capcut-mcp"
+    simple_conversion: "ffmpeg-mcp"
+
+quality_checks:
+  verify_duration: true
+  verify_resolution: true
+  verify_frame_rate: true
+  verify_audio_sync_when_audio_exists: true
+  report_output_path: true
